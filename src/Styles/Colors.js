@@ -5,4 +5,4 @@ export const LIGHT_PURPLE = '#76427C';
 export const DARK_PURPLE = '#28082D';
 export const RED = '#EF0F0F';
 export const PLACEHOLDER = 'rgba(40, 8, 45, 0.5)';
-export const BACKGROUND = '#EBEAEB';
+export const BACKGROUND = 'rgba(185, 178, 182, 0.5)';

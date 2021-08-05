@@ -17,5 +17,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     textAlign: 'center',
     fontSize: TYPO.FONT_SIZE_20,
+    padding: 10,
   },
 });

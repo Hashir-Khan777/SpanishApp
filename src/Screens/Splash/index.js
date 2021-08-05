@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, View} from 'react-native';
 import {Icon, Text} from '../../Common';
 import {Colors, TYPO} from '../../Styles';
 import {logo} from '../../Assets/Icons';
 import {CommonActions} from '@react-navigation/routers';
 import {useNavigation} from '@react-navigation/native';
+import {brain} from '../../Assets/Images';
 
 const SplashScreen = () => {
   const navigation = useNavigation();
@@ -23,14 +24,16 @@ const SplashScreen = () => {
   }, []);
 
   return (
-    <View style={styles.main}>
-      <Icon name={logo} iconHeight={80} />
-      <View style={styles.logo}>
-        <Text textStyle={styles.psico}>PSICO</Text>
-        <Text textStyle={styles.help}>HELP</Text>
+    <ImageBackground style={styles.image} source={brain}>
+      <View style={styles.main}>
+        <Icon name={logo} iconHeight={80} />
+        <View style={styles.logo}>
+          <Text textStyle={styles.psico}>PSICO</Text>
+          <Text textStyle={styles.help}>HELP</Text>
+        </View>
+        <Text textStyle={styles.tagLine}>SOPORTE PISICOLOGICO</Text>
       </View>
-      <Text textStyle={styles.tagLine}>SOPORTE PISICOLOGICO</Text>
-    </View>
+    </ImageBackground>
   );
 };
 
@@ -61,5 +64,9 @@ const styles = StyleSheet.create({
   tagLine: {
     fontSize: TYPO.FONT_SIZE_16,
     textAlign: 'center',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
   },
 });
